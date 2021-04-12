@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Проект - компютърна графика 2020, Димитър А.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="func.js" type="text/javascript">
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="box">
+      <label for="colorpick">Избери цвят: </label><input class="buttonA" id="colorpick" name="colorpick" type="color" /><br />
+    </div>
+
+    <div class="box">
+      <button class="buttonA" id="circle"><i class="circle"></i></button>
+      <button class="buttonA" id="square"><i class="square"></i></button>
+      <button class="buttonA" id="rectangle"><i class="rectangle"></i></button>
+      <button class="buttonA" id="triangle"><i class="triangle"></i></button>
+      <button class="buttonA" id="line"><i class="line"></i></button>
+    </div>
+
+    <div class="box">
+      <button id="primitive">Начертай примитив</button>
+    </div>
+
+    <div class="box">
+      <button id="clear">Изчисти екрана</button>
+    </div>
+
+
+  </header>
+
+  <div class="container">
+
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+      pickColor();
+
+      clearCanvas();
+
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      context.canvas.width = window.innerWidth;
+      context.canvas.height = window.innerHeight;
+
+      selectShape();
+      
+    </script>
+
+
+  </div>
+</body>
+
+</html>
